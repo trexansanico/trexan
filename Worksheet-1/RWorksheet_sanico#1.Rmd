@@ -1,0 +1,211 @@
+---
+title: "Worksheet-1 in R"
+author: "Trexan Sanico"
+date: "2024-09-04"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+1. 
+a. How many data points? 
++There are 34 data points.
+
+b. Write the R code and its output.
+```{r}
+age <- c(34, 28, 22, 36, 27, 18, 52, 39, 42, 29, 35, 31, 27, 22, 37, 34, 19, 20, 57, 49, 50, 37, 46, 25, 17, 37, 42, 53, 41, 51, 35, 24, 33, 41)
+
+points <- length(age)
+
+print(points)
+```
+
+2. Find the reciprocal of the values for age.
+```{r}
+reciprocal_age <- 1 / age
+
+print(reciprocal_age)
+```
+
+3. What happened to the new_age?
++It duplicates the age vector with 0 in the middle. 
+
+```{r}
+new_age <- c(age, 0, age) 
+
+print(new_age)
+```
+
+4. Sort the values for age
+```{r}
+sortAge <- sort(age)
+
+print(sortAge)
+```
+
+5. Find the minimum and maximum value for age. 
+```{r}
+minAge <- min(age)
+minAge
+
+maxAge <- max(age)
+maxAge
+```
+
+6.
+a. How many data points? 
++There are 12 data points.
+
+b. Write the R code and its output.
+```{r}
+data <- c(2.4, 2.8, 2.1, 2.5, 2.4, 2.2, 2.5, 2.3, 2.5, 2.3, 2.4, 2.7)
+
+points <- length(data)
+
+print(points)
+```
+
+7.  Generate a new vector for data where you double every value of the data. What happen to the data?
++The data were increased by two.
+```{r}
+double_data <- data * 2
+
+print(double_data)
+```
+
+8. Generate a sequence for the following scenario:
+8.1 Integers from 1 to 100.
+```{r}
+sequence <- seq(1, 100)
+
+print(sequence)
+```
+
+8.2 Numbers from 20 to 60
+```{r}
+n <- seq(20, 60)
+
+print(n)
+```
+
+8.3 Mean of numbers from 20 to 60
+```{r}
+numSeq <- seq(20, 60)
+
+meanNum <- mean(numSeq)
+print(meanNum)
+```
+
+8.4 Sum of numbers from 51 to 91
+```{r}
+numsum <- sum(seq(51, 91))
+numsum
+```
+
+8.5 Integers from 1 to 1,000
+```{r}
+s <- seq(1:1000)
+
+print(s)
+```
+
+a. How many data points from 8.1 to 8.4?
++There are 143 data points. 
+```{r}
+length1 <- length(sequence)
+length2 <- length(n)
+length3 <- length(meanNum)
+length4 <- length(numsum)
+sum (length1+length2+length3+length4)
+```
+
+b. Write the R code and its output from 8.1 to 8.4.
+```{r}
+sequence <- seq(1:100)
+n <- seq(20:60)
+meanNum <- mean(20:60)
+numsum <- sum(51:91)
+```
+
+c. For 8.5 find only maximum data points until 10.
+```{r}
+m <- 1:1000
+ans <- max(m[t <- 10])
+ans
+```
+
+9. Print a vector with the integers between 1 and 100 that are not divisible by 3, 5 and 7 using filter option.
+```{r}
+Filter(function(i) { all(i %% c(3,5,7) != 0) }, seq(100))
+```
+
+10. Generate a sequence backwards of the integers from 1 to 100.
+```{r}
+bckwrd <- seq(100, 1, by = -1)
+
+print(bckwrd)
+```
+
+11. List all the natural numbers below 25 that are multiples of 3 or 5. Find the sum of these multiples.
+```{r}
+numbers <- 1:24
+
+multiples <- numbers[numbers %% 3 == 0 | numbers %% 5 == 0]
+print(multiples)
+
+sum <- sum(multiples)
+print(sum)
+```
+
+a. How many data points from 10 to 11?
++There are 12 data points.
+
+b. Write the R code and its output from 10 and 11.
+```{r}
+dp10 <- length(multiples)
+dp11 <- 1
+
+total <- dp10 + dp11
+total
+```
+
+12. Describe the output.
++The line is incomplete. Thus, it caused an error. 
+```{r}
+x <- {0 + x + 5 + }
+```
+
+13. Find x[2] and x[3]. Write the R code and its output.tre
+```{r}
+score <- c(72, 86, 92, 63, 88, 89, 91, 92, 75,
+75, 77)
+
+x2 <- score[2]
+x3 <- score[3]
+
+print(x2)
+print(x3)
+```
+
+14.Create a vector a = c(1,2,NA,4,NA,6,7).
+a. Change the NA to 999 using the codes print(a,na.print="-999").
+b. Write the R code and its output. Describe the output.
++The output displays the vector 'a' with NA values being replaced by '-999'. The values of a in memory remain the same. 
+```{r}
+a <- c(1,2,NA,4,NA,6,7)
+
+print(a, na.print = "-999")
+```
+
+15. 
+```{r}
+name = readline(prompt="Input your name: ")
+age = readline(prompt="Input your age: ")
+print(paste("My name is",name, "and I am",age ,"years old."))
+print(R.version.string)
+```
+What is the output of the above code?
++I input my name and my age and it shows as this, "My name is trexan sanico and I am 19 years old."
+
+

@@ -170,8 +170,13 @@ total <- dp10 + dp11
 total
 ```
 
+12. Describe the output.
++The line is incomplete. Thus, it caused an error. 
+```{r}
+x <- {0 + x + 5 + }
+```
 
-13. Find x[2] and x[3]. Write the R code and its output. 
+13. Find x[2] and x[3]. Write the R code and its output.  
 ```{r}
 score <- c(72, 86, 92, 63, 88, 89, 91, 92, 75,
 75, 77)

@@ -208,4 +208,3 @@ print(R.version.string)
 What is the output of the above code?
 +I input my name and my age and it shows as this, "My name is trexan sanico and I am 19 years old."
 
-

@@ -79,5 +79,5 @@ excelData <- read.table("/cloud/project/Worksheet-4a/import_march.csv", header =
 ```
 #b. View the dataset. Write the R scripts and its result.
 ``` {r}
-print(excelData)
+print(excelData)  
 ```

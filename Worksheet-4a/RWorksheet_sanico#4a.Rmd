@@ -81,3 +81,28 @@ excelData <- read.table("/cloud/project/Worksheet-4a/import_march.csv", header =
 ``` {r}
 print(excelData)  
 ```
+
+#6. 
+#a. Create an R Program that allows the User to randomly select numbers from 1 to 50. Then display the chosen number. If the number is beyond the range of the selected choice,it will have to display a string “The number selected is beyond the range of 1 to 50”. If number 20 is inputted by the User, it will have to display “TRUE”, otherwise display the number.
+```{r}
+input_num <- readline(prompt = "Enter a number between 1 and 50: ")
+choose_num <- (1:50)
+paste("Chosen number: ", choose_num)
+
+if (input_num < 1 || input_num > 50) {
+  print("The number selected is beyond the range of 1 to 50.")
+} else if(input_num == 20) {
+  print("True")
+} else {
+  input_num
+}
+```
+#7. Change
+#At ISATU University’s traditional cafeteria, snacks can only be purchased with bills. A long-standing rule at the concession stand is that snacks must be purchased with as few coins as possible. There are three types of bills: 50 pesos, 100 pesos, 200 pesos, 500 pesos, 1000 pesos.
+#a. Write a function that prints the minimum number of bills that must be paid, given the price of the snack. Input: Price of snack (a random number divisible by 50) Output: Minimum number of bills needed to purchase a snack.
+
+
+
+
+
+

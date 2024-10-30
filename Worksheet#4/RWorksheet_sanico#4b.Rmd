@@ -1,0 +1,52 @@
+---
+title: "Worksheet-4b in R"
+author: "Trexan Sanico"
+date: "2024-10-30"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#1. Using the for loop, create an R script that will display a 5x5 matrix as shown in Figure 1. It must contain vectorA = [1,2,3,4,5] and a 5 x 5 zero matrix.
+```{r}
+vectorA <- c(1, 2, 3, 4, 5)
+matrix0 <- matrix (0, nrow = 5, ncol = 5)
+
+for (i in 1:5) {
+  for (j in 1:5) {
+  matrix0[i, j] <- abs(vectorA[i] - vectorA [j])
+  }
+}
+matrix0
+```
+#2. Print the string "*" using for() function. The output should be the same as shown in Figure 1. 
+```{r}
+for (i in 1:5) {
+  cat(rep('"*"',i), "\n")
+}
+```
+#3. Get an input from the user to print the Fibonacci sequence starting from the 1st input up to 500. Use repeat and break statements. Write the R Scripts and its output.
+```{r}
+a <- 0
+b <- 1
+
+c <- readline(prompt = "Enter a number: ")
+
+repeat {
+  c <- a + b
+  if (c > 500) break
+  a <- b
+  b <- c
+  print(c)
+}
+```
+#4. Import the dataset as shown in Figure 1 you have created previously. 
+#a. What is the R script for importing an excel or a csv file? Display the first 6 rows of the dataset? Show your codes and its result
+
+
+#b. Create a subset for gender(female and male). How many observations are there in Male? How about in Female? Write the R scripts and its output.
+
+
+
